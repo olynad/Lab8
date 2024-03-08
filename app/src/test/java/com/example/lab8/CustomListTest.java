@@ -59,5 +59,13 @@ public class CustomListTest {
         assertFalse(list.hasCity(city2)); // City2 should not exist after deletion
     }
 
+    @Test
+    public void testCityCount(){
+        list = MockCityList();
+        assertEquals(0, list.countCities());
+        list.addCity(new City("City2", "Province2"));
+        list.addCity(new City("City1", "Province1"));
+        assertEquals(2, list.countCities());
+    }
 
 }

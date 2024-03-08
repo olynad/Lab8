@@ -1,7 +1,6 @@
 package com.example.lab8;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,5 +62,10 @@ public class CustomList extends ArrayAdapter<City> {
 
     public void deleteCity(City city) {
         cities.remove(city);
+    }
+
+    public short countCities(){
+
+        return 0;
     }
 }
