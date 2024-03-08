@@ -52,5 +52,14 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city){
 
     }
+    private CustomList list;
+    /**
+     * create a mocklist for my citylist
+     * @return
+     */
+    public CustomList MockCityList(){
+        list = new CustomList(null,new ArrayList<>());
+        return list;
+    }
 
 }
