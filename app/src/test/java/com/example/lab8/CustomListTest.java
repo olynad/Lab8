@@ -44,17 +44,19 @@ public class CustomListTest {
     @Test
     public void testHasCity() {
         list = MockCityList();
-        assertFalse(list.hasCity("Estevan")); // Initially, the list should not have the city
-        list.addCity(new City("Estevan", "SK"));
-        assertTrue(list.hasCity("Estevan")); // After adding, the list should have the city
+        City city1 = new City("Test1", "Test2");
+        list.addCity(city1);
+        assertTrue(list.hasCity(city1));
     }
 
     @Test
     public void testDeleteCity() {
-        list.addCity(new City("Estevan", "SK"));
-        assertTrue(list.hasCity("Estevan"));
-        list.deleteCity("Estevan");
-        assertFalse(list.hasCity("Estevan"));
+        list = MockCityList();
+        City city2 = new City("City2", "Province2");
+        list.addCity(city2);
+        assertTrue(list.hasCity(city2)); // City2 should exist before deletion
+        list.deleteCity(city2);
+        assertFalse(list.hasCity(city2)); // City2 should not exist after deletion
     }
 
 
